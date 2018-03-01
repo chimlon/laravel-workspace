@@ -34,7 +34,7 @@ RUN pecl install xdebug \
     && docker-php-ext-enable xdebug
     
 # Install php_mysql extention
-RUN docker-php-ext-install pdo_mysql gd
+RUN docker-php-ext-install pdo_mysql
 
 # remove load xdebug extension (only load on phpunit command)
 # RUN sed -i 's/^/;/g' /etc/php/7.1/cli/conf.d/20-xdebug.ini
